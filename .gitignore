@@ -7,6 +7,8 @@
 
 !/src/*
 !platformio.ini
-!.gitignore
+!README.md
 
 /src/secret.h
+
+!.gitignore
