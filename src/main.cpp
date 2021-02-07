@@ -268,9 +268,13 @@ void loop(void)
 		currentMinute = minute();
 
 		P.displayClear(); // test
-						  //		P.displayReset(); // test
+		P.displayClear(); // test
+		P.displayClear(); // test
+		P.displayClear(); // test
+		P.displayClear(); // test
+		P.displayClear(); // test
+		P.displayClear(); // test
 
-		//	syncRTCWithNTP();
 		if (WiFi.status() != WL_CONNECTED)
 		{
 			wifiStatus = false;
@@ -283,13 +287,11 @@ void loop(void)
 
 		if (ntpEvent < 0)
 		{
-			//        processSyncEvent (ntpEvent);
 			ntpStatus = false;
 		}
 		else
 		{
 			ntpStatus = true;
-			//			syncRTCWithNTP(); // If Time need correction
 		}
 		processSyncEvent(ntpEvent);
 
@@ -297,11 +299,9 @@ void loop(void)
 		if (currentDay != day())
 		{
 			currentDay = day();
-			//			ntpStatus = false; // Time need correction
 
 			if (ntpEvent < 0)
 			{
-				//        processSyncEvent (ntpEvent);
 				ntpStatus = false;
 			}
 			else
